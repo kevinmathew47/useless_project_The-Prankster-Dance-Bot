@@ -1,59 +1,52 @@
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# [Project Name] 🎯
+# The Prankster Dance Bot 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
 
-
-### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+## Kevin Mathew
 
 ### Project Description
-[2-3 lines about what your project does]
-
+The Prankster Dance Bot is a whimsical robot that springs to life and dances unpredictably whenever it detects movement nearby. Its sole purpose is to surprise and entertain, adding a delightful and unexpected touch of humor to any space.
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Too many rooms are dull and uneventful. People need spontaneous, surprise entertainment to brighten up their day without any pre-scheduled dance parties or music.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+Introducing the Prankster Dance Bot—a bot that detects movement and immediately starts grooving with unpredictable dance moves. It’s the ultimate boredom-buster that nobody knew they needed!
 
 ## Technical Details
 ### Technologies/Components Used
-For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+# For Software:
+- Languages used: C++ (for programming the ESP32 microcontroller)
+- Frameworks used: Arduino IDE
+- Libraries used: Servo library, MPU6050 library (for motion sensor control)
+- Tools used: Arduino IDE, ESP32 package, Serial Monitor for debugging
+# For Hardware:
+- Main Components:
+-- ESP32 microcontroller
+- IR motion sensor
+- MPU6050 sensor (to sense its own orientation and movements)
+- Servo motor for dance moves
+# Specifications:
+- ESP32: 240 MHz dual-core, Wi-Fi and Bluetooth capabilities
+- Servo motor: 180-degree range of motion for exaggerated dance moves
+- IR sensor range: Adjustable sensitivity to detect nearby motion
+# Tools Required:
+- Breadboard
+- Jumper wires
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+- Install the Arduino IDE.
+- Add the ESP32 board to Arduino by going to Preferences > Additional Board Manager URLs and pasting the ESP32 URL.
+- Install necessary libraries: Sketch > Include Library > Manage Libraries
 
 # Run
-[commands]
-
-### Project Documentation
-For Software:
-
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+- Connect the ESP32 to your computer via USB.
+- Upload the code by selecting the correct board and port in Tools.
+- Open the Serial Monitor to check sensor data and debug as needed.
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
@@ -62,34 +55,23 @@ For Software:
 For Hardware:
 
 # Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
++-----------------------+          +---------------------+
+|        ESP32          |          |    IR Motion Sensor |
+|                       |          |                     |
+| 3.3V -------------- VCC|----------| VCC                 |
+| GND -------------- GND |----------| GND                 |
+| GPIO 23 ----------- OUT |----------| OUT                 |
+|                       |          +---------------------+
+| GPIO 21 (SDA) --------|----------+---------------------+
+| GPIO 22 (SCL) --------|----------| MPU6050             |
+|                       |          |                     |
+| GPIO 18 ----------- Signal|--------| Servo Motor        |
+|                       |          |                     |
+| 5V --------------- VCC |---------| VCC                 |
+| GND --------------- GND |---------| GND                 |
++-----------------------+          +---------------------+
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
